@@ -3,19 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA119C16250C1CAB00E7E776 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA119C15250C1CAB00E7E776 /* SearchBar.swift */; };
+		BA119C18250C1CD200E7E776 /* AppCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA119C17250C1CD200E7E776 /* AppCard.swift */; };
+		BA119C1C250C1D3100E7E776 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA119C1B250C1D3100E7E776 /* GridViewModel.swift */; };
+		BA119C1F250C1DA100E7E776 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA119C1E250C1DA100E7E776 /* Models.swift */; };
 		BAC4052E250BEE5500F84FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4052D250BEE5500F84FAB /* AppDelegate.swift */; };
 		BAC40530250BEE5500F84FAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4052F250BEE5500F84FAB /* SceneDelegate.swift */; };
 		BAC40532250BEE5500F84FAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC40531250BEE5500F84FAB /* ContentView.swift */; };
 		BAC40534250BEE5600F84FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC40533250BEE5600F84FAB /* Assets.xcassets */; };
 		BAC40537250BEE5600F84FAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC40536250BEE5600F84FAB /* Preview Assets.xcassets */; };
 		BAC4053A250BEE5600F84FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC40538250BEE5600F84FAB /* LaunchScreen.storyboard */; };
+		BAD7B56B250C0C4D00E98EC0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BAD7B56A250C0C4D00E98EC0 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA119C15250C1CAB00E7E776 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		BA119C17250C1CD200E7E776 /* AppCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCard.swift; sourceTree = "<group>"; };
+		BA119C1B250C1D3100E7E776 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
+		BA119C1E250C1DA100E7E776 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		BAC4052A250BEE5500F84FAB /* GridSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC4052D250BEE5500F84FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAC4052F250BEE5500F84FAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +40,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD7B56B250C0C4D00E98EC0 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA119C19250C1CF500E7E776 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA119C1B250C1D3100E7E776 /* GridViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BA119C1A250C1CFF00E7E776 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAC40531250BEE5500F84FAB /* ContentView.swift */,
+				BA119C15250C1CAB00E7E776 /* SearchBar.swift */,
+				BA119C17250C1CD200E7E776 /* AppCard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA119C1D250C1D8500E7E776 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA119C1E250C1DA100E7E776 /* Models.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BAC40521250BEE5500F84FAB = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +92,11 @@
 		BAC4052C250BEE5500F84FAB /* GridSearch */ = {
 			isa = PBXGroup;
 			children = (
+				BA119C1D250C1D8500E7E776 /* Model */,
+				BA119C1A250C1CFF00E7E776 /* View */,
+				BA119C19250C1CF500E7E776 /* ViewModel */,
 				BAC4052D250BEE5500F84FAB /* AppDelegate.swift */,
 				BAC4052F250BEE5500F84FAB /* SceneDelegate.swift */,
-				BAC40531250BEE5500F84FAB /* ContentView.swift */,
 				BAC40533250BEE5600F84FAB /* Assets.xcassets */,
 				BAC40538250BEE5600F84FAB /* LaunchScreen.storyboard */,
 				BAC4053B250BEE5600F84FAB /* Info.plist */,
@@ -91,6 +129,9 @@
 			dependencies = (
 			);
 			name = GridSearch;
+			packageProductDependencies = (
+				BAD7B56A250C0C4D00E98EC0 /* SDWebImageSwiftUI */,
+			);
 			productName = GridSearch;
 			productReference = BAC4052A250BEE5500F84FAB /* GridSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -102,7 +143,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Victor Mihaita";
 				TargetAttributes = {
 					BAC40529250BEE5500F84FAB = {
@@ -119,6 +160,9 @@
 				Base,
 			);
 			mainGroup = BAC40521250BEE5500F84FAB;
+			packageReferences = (
+				BAD7B569250C0C4D00E98EC0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = BAC4052B250BEE5500F84FAB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,8 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAC4052E250BEE5500F84FAB /* AppDelegate.swift in Sources */,
+				BA119C18250C1CD200E7E776 /* AppCard.swift in Sources */,
+				BA119C1C250C1D3100E7E776 /* GridViewModel.swift in Sources */,
+				BA119C16250C1CAB00E7E776 /* SearchBar.swift in Sources */,
 				BAC40530250BEE5500F84FAB /* SceneDelegate.swift in Sources */,
 				BAC40532250BEE5500F84FAB /* ContentView.swift in Sources */,
+				BA119C1F250C1DA100E7E776 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +240,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +301,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -289,6 +339,7 @@
 				DEVELOPMENT_TEAM = JL84E9GK95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GridSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +360,7 @@
 				DEVELOPMENT_TEAM = JL84E9GK95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GridSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BAD7B569250C0C4D00E98EC0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BAD7B56A250C0C4D00E98EC0 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD7B569250C0C4D00E98EC0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BAC40522250BEE5500F84FAB /* Project object */;
 }
