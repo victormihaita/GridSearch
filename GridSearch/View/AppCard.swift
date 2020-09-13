@@ -13,21 +13,24 @@ struct AppCard: View {
     var item: Result
 
     var body: some View {
-        VStack(alignment: .leading) {
-            WebImage(url: URL(string: item.artworkUrl100))
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(22)
-            Text(item.name)
-                .lineLimit(3)
-                .font(.system(size: 10, weight: .semibold))
-            Text(item.releaseDate)
-                .lineLimit(1)
-                .font(.system(size: 9, weight: .regular))
-            Text(item.copyright)
-                .lineLimit(3)
-                .font(.system(size: 9, weight: .regular))
-                .foregroundColor(.gray)
+        NavigationLink(destination: AppDetail(item: item)) {
+            VStack(alignment: .leading) {
+                WebImage(url: URL(string: item.artworkUrl100))
+                    .resizable()
+                    .renderingMode(.original)
+                    .scaledToFit()
+                    .cornerRadius(22)
+                Text(item.name)
+                    .lineLimit(3)
+                    .font(.system(size: 10, weight: .semibold))
+                Text(item.releaseDate)
+                    .lineLimit(1)
+                    .font(.system(size: 9, weight: .regular))
+                Text(item.copyright)
+                    .lineLimit(3)
+                    .font(.system(size: 9, weight: .regular))
+                    .foregroundColor(.gray)
+            }
         }
     }
 }

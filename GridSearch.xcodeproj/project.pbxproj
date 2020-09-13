@@ -11,6 +11,7 @@
 		BA119C18250C1CD200E7E776 /* AppCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA119C17250C1CD200E7E776 /* AppCard.swift */; };
 		BA119C1C250C1D3100E7E776 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA119C1B250C1D3100E7E776 /* GridViewModel.swift */; };
 		BA119C1F250C1DA100E7E776 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA119C1E250C1DA100E7E776 /* Models.swift */; };
+		BA119C21250EB92D00E7E776 /* AppDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA119C20250EB92D00E7E776 /* AppDetail.swift */; };
 		BAC4052E250BEE5500F84FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4052D250BEE5500F84FAB /* AppDelegate.swift */; };
 		BAC40530250BEE5500F84FAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4052F250BEE5500F84FAB /* SceneDelegate.swift */; };
 		BAC40532250BEE5500F84FAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC40531250BEE5500F84FAB /* ContentView.swift */; };
@@ -25,6 +26,7 @@
 		BA119C17250C1CD200E7E776 /* AppCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCard.swift; sourceTree = "<group>"; };
 		BA119C1B250C1D3100E7E776 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
 		BA119C1E250C1DA100E7E776 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		BA119C20250EB92D00E7E776 /* AppDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetail.swift; sourceTree = "<group>"; };
 		BAC4052A250BEE5500F84FAB /* GridSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC4052D250BEE5500F84FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAC4052F250BEE5500F84FAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				BAC40531250BEE5500F84FAB /* ContentView.swift */,
 				BA119C15250C1CAB00E7E776 /* SearchBar.swift */,
 				BA119C17250C1CD200E7E776 /* AppCard.swift */,
+				BA119C20250EB92D00E7E776 /* AppDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				BA119C1C250C1D3100E7E776 /* GridViewModel.swift in Sources */,
 				BA119C16250C1CAB00E7E776 /* SearchBar.swift in Sources */,
 				BAC40530250BEE5500F84FAB /* SceneDelegate.swift in Sources */,
+				BA119C21250EB92D00E7E776 /* AppDetail.swift in Sources */,
 				BAC40532250BEE5500F84FAB /* ContentView.swift in Sources */,
 				BA119C1F250C1DA100E7E776 /* Models.swift in Sources */,
 			);

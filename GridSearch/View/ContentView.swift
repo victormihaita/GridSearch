@@ -16,18 +16,19 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ScrollView {
-                SearchBar(text: $searchData)
-                    .padding([.horizontal, .bottom], 16)
-
-                LazyVGrid(columns: columns, spacing: 16) {
-                    ForEach(vm.items.filter { filterName(for: $0) }, id: \.id) {
-                        AppCard(item: $0)
-                    }
-                }.padding(.horizontal, 16)
+            VStack {
+                ScrollView {
+                    SearchBar(text: $searchData)
+                        .padding([.horizontal, .bottom], 16)
+                    LazyVGrid(columns: columns, spacing: 16) {
+                        ForEach(vm.items.filter { filterName(for: $0) }, id: \.id) {
+                            AppCard(item: $0)
+                        }
+                    }.padding(.horizontal, 16)
+                }
             }
-            .navigationTitle("Grid Search")
-            .gesture(DragGesture().onChanged {_ in
+            .navigationTitle("New Apps We Love")
+            .gesture(DragGesture().onChanged { _ in
                 UIApplication.shared.endEditing()
             })
             .onTapGesture {
@@ -42,12 +43,5 @@ struct ContentView: View {
         } else {
             return item.name.lowercased().contains(searchData.lowercased())
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .previewDevice("iPhone 11 Pro")
     }
 }

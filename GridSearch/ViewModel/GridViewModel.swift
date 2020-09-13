@@ -14,7 +14,7 @@ class GridViewModel: ObservableObject {
 
     private var cancelable: AnyCancellable?
     private let sessionProcessingQueue = DispatchQueue(label: "SessionProcessingQueue")
-    private let urlString = "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-apps-we-love/all/100/explicit.json"
+    private let urlString = "https://rss.itunes.apple.com/api/v1/ro/ios-apps/new-apps-we-love/all/100/explicit.json"
 
     init() {
         guard let url = URL(string: urlString) else { return }
