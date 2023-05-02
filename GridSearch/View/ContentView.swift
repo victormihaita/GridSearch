@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     var columns: [GridItem] = Array(repeating: GridItem(.flexible(), spacing: 16, alignment: .top), count: 3)
 
-    @ObservedObject var vm = GridViewModel()
+    @ObservedObject var viewModel = GridViewModel()
     @State private var searchData = ""
 
     var body: some View {
@@ -21,13 +21,13 @@ struct ContentView: View {
                     SearchBar(text: $searchData)
                         .padding([.horizontal, .bottom], 16)
                     LazyVGrid(columns: columns, spacing: 16) {
-                        ForEach(vm.items.filter { filterName(for: $0) }, id: \.id) {
+                        ForEach(viewModel.items.filter { filterName(for: $0) }, id: \.id) {
                             AppCard(item: $0)
                         }
                     }.padding(.horizontal, 16)
                 }
             }
-            .navigationTitle("New Apps We Love")
+            .navigationTitle("Apple Music: Albums")
             .gesture(DragGesture().onChanged { _ in
                 UIApplication.shared.endEditing()
             })

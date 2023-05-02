@@ -13,13 +13,18 @@ class GridViewModel: ObservableObject {
     @Published var items = [Result]()
 
     private var cancelable: AnyCancellable?
-    private let sessionProcessingQueue = DispatchQueue(label: "SessionProcessingQueue")
-    private let urlString = "https://rss.itunes.apple.com/api/v1/ro/ios-apps/new-apps-we-love/all/100/explicit.json"
+
+    private let pageSize = 20
+
+    private var url: URL? {
+        let urlString = "https://rss.applemarketingtools.com/api/v2/us/music/most-played/\(pageSize)/albums.json"
+        return URL(string: urlString)
+    }
 
     init() {
-        guard let url = URL(string: urlString) else { return }
+        guard let url = url else { return }
         cancelable = URLSession.shared.dataTaskPublisher(for: url)
-            .subscribe(on: sessionProcessingQueue)
+            .subscribe(on: DispatchQueue.global())
             .map { $0.data }
             .decode(type: RSS.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)

@@ -23,7 +23,7 @@ struct AppDetail: View {
 
                 VStack(alignment: .leading) {
                     Text(item.name)
-                    Text(item.copyright)
+                    Text(item.artistName)
                     Text(item.releaseDate)
                 }
 
